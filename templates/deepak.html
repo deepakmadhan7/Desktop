@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Indian Laws</title>
+     <style>
+        body{/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styles for the body */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Container to center content and add padding */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styling */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Navigation bar styling */
+nav {
+    background: #444;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main content area styling */
+main {
+    margin: 20px 0;
+}
+
+main h2 {
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+/* Form styling */
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #555;
+}
+
+/* Search results styling */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+ul li strong {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+/* Footer styling */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}}
+     </style>
+</head>
+<body>
+    <header>
+        <h1>Basic Indian Laws</h1>
+        <nav>
+            <ul>
+                <li><a href="#criminal">Criminal Laws</a></li>
+                <li><a href="#civil">Civil Laws</a></li>
+                <li><a href="#property">Property Laws</a></li>
+                <li><a href="#family">Family Laws</a></li>
+                <li><a href="#resources">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+     <section id="search">
+            <h2>Search</h2>
+            <form id="searchForm">
+                <input type="text" id="searchInput" placeholder="Search for laws...">
+                <button type="button" onclick="performSearch()">Search</button>
+            </form>
+            <div id="searchResults"></div>
+        </section>
+
+        <section id="criminal">
+            <h2>Criminal Laws</h2>
+            <img src="{{ url_for('static', filename='criminal-laws.jpg') }}" alt="Criminal Laws" class="section-image">
+            <p>Criminal laws in India are designed to protect society by punishing those who commit crimes. The Indian Penal Code (IPC) is the primary code defining offenses and punishments.</p>
+            <h3>Key Sections</h3>
+            <ul>
+                <li><strong>Section 302:</strong> Punishment for murder.</li>
+                <li><strong>Section 376:</strong> Punishment for rape.</li>
+                <li><strong>Section 420:</strong> Cheating and dishonestly inducing delivery of property.</li>
+            </ul>
+        </section>
+
+        <section id="civil">
+            <h2>Civil Laws</h2>
+            <img src="{{ url_for('static', filename='civil-laws.jpg') }}" alt="Civil Laws" class="section-image">
+            <p>Civil laws deal with disputes between individuals or organizations. These laws address issues such as contracts, property, and family matters.</p>
+            <h3>Key Areas</h3>
+            <ul>
+                <li><strong>Contracts:</strong> Agreements enforceable by law.</li>
+                <li><strong>Torts:</strong> Civil wrongs causing harm or loss.</li>
+                <li><strong>Consumer Protection:</strong> Rights of consumers and redressal mechanisms.</li>
+            </ul>
+        </section>
+
+        <section id="property">
+            <h2>Property Laws</h2>
+            <img src="{{ url_for('static', filename='property-laws.jpg') }}" alt="Property Laws" class="section-image">
+            <p>Property laws govern the ownership and transfer of property. They include regulations on land acquisition, property rights, and disputes.</p>
+            <h3>Key Laws</h3>
+            <ul>
+                <li><strong>Transfer of Property Act, 1882:</strong> Governs the transfer of property ownership.</li>
+                <li><strong>Land Acquisition Act, 1894:</strong> Rules for acquiring land for public purposes.</li>
+                <li><strong>Indian Registration Act, 1908:</strong> Registration of property transactions.</li>
+            </ul>
+        </section>
+
+        <section id="family">
+            <h2>Family Laws</h2>
+            <img src="{{ url_for('static', filename='family-laws.jpg') }}" alt="Family Laws" class="section-image">
+            <p>Family laws address issues related to family matters such as marriage, divorce, and inheritance. They include personal laws for different communities.</p>
+            <h3>Key Laws</h3>
+            <ul>
+                <li><strong>Hindu Marriage Act, 1955:</strong> Governs marriage and divorce among Hindus.</li>
+                <li><strong>Muslim Personal Law:</strong> Regulates marriage, divorce, and inheritance for Muslims.</li>
+                <li><strong>Special Marriage Act, 1954:</strong> Provides for marriage between individuals of different religions.</li>
+            </ul>
+        </section>
+
+        <section id="resources">
+            <h2>Resources</h2>
+            <p>For more information on Indian laws, you can refer to the following resources:</p>
+            <ul>
+                <li><a href="https://indiankanoon.org/" target="_blank">Indian Kanoon</a></li>
+                <li><a href="https://legislative.gov.in/" target="_blank">Legislative Department</a></li>
+                <li><a href="https://www.judiciary.gov.in/" target="_blank">Supreme Court of India</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Basic Indian Laws. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Sample data to simulate search functionality
+        const data = {
+            "Criminal Laws": ["Section 302: Punishment for murder.", "Section 376: Punishment for rape.", "Section 420: Cheating and dishonestly inducing delivery of property."],
+            "Civil Laws": ["Contracts: Agreements enforceable by law.", "Torts: Civil wrongs causing harm or loss.", "Consumer Protection: Rights of consumers and redressal mechanisms."],
+            "Property Laws": ["Transfer of Property Act, 1882: Governs the transfer of property ownership.", "Land Acquisition Act, 1894: Rules for acquiring land for public purposes.", "Indian Registration Act, 1908
+    </head>        
+    <body>
+        <img src="image.jpg" alt="">
+    </body>
+    </html>
